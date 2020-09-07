@@ -22,3 +22,5 @@ npm run install
 ```bash
 npm run build
 ```
+## 截图
+![9kEJh.png](https://wx2.sbimg.cn/2020/09/07/9kEJh.png)
