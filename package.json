@@ -1,0 +1,12 @@
+{
+  "name": "wolai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "nativefier": "^10.1.0"
+  }
+}
