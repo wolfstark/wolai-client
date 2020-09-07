@@ -4,6 +4,7 @@
 
 [安装NodeJs环境](https://nodejs.org/zh-cn/download/)
 
+下载并解压本项目，进入项目文件夹下
 
 安装依赖
 
