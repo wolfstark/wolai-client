@@ -9,7 +9,10 @@ var options = {
   name: "wolai", // will be inferred if not specified
   targetUrl: "https://www.wolai.com", // required
   version: "1.0.1",
-  out: ".",
+  out: "./dist",
+  zoom: 1.0,
+  showMenuBar: false,
+  disableContextMenu: true,
   icon: "./PNG/wolai_icon_512.png",
   inject: ["./src/customjs.js"],
   titleBarStyle: "hiddenInset",
