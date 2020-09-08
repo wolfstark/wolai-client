@@ -99,9 +99,9 @@ addStylesheetRules({
   ".gJqt_._3sa-7::before": {
     height: "0",
   },
-  // "._3xxlZ": {
-  //   "-webkit-app-region": "drag",
-  // },
+  "._3xxlZ": {
+    "-webkit-app-region": "drag",
+  },
   ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
     "padding-left": "71px",
   },
