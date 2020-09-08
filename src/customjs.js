@@ -66,6 +66,9 @@ addStylesheetRules({
     fill: "currentcolor",
     color: "rgba(55, 53, 47, 0.8)",
   },
+  "._2XCma path": {
+    color: "var(--wolai-svg-CF5659)",
+  },
 
   'html[theme="dark"] ._3DZG7 path,html[theme="dark"] ._3-gMw path': {
     color: "inherit",
