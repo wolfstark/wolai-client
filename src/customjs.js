@@ -61,14 +61,14 @@ addStylesheetRules({
     background: "#252528 !important",
   },
 
-  ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
-    "padding-left": "71px",
-  },
-
   /* 编辑区icon */
   "._3DZG7 path, ._3-gMw path": {
     fill: "currentcolor",
     color: "rgba(55, 53, 47, 0.8)",
+  },
+
+  'html[theme="dark"] ._3DZG7 path,html[theme="dark"] ._3-gMw path': {
+    color: "inherit",
   },
 
   /* 侧边栏 空间*/
@@ -101,5 +101,8 @@ addStylesheetRules({
   },
   "._3xxlZ": {
     "-webkit-app-region": "drag",
+  },
+  ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
+    "padding-left": "71px",
   },
 });
