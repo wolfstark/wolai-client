@@ -57,6 +57,14 @@ addStylesheetRules({
     background: "rgb(252, 249, 245) !important",
   },
 
+  'html[theme="dark"] body': {
+    background: "inherit",
+  },
+
+  ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
+    "padding-left": "71px",
+  },
+
   /* 编辑区icon */
   "._3DZG7 path, ._3-gMw path": {
     fill: "currentcolor",
@@ -86,6 +94,12 @@ addStylesheetRules({
   ".gJqt_::before": {
     content: "''",
     height: "26px",
+    "-webkit-app-region": "drag",
+  },
+  ".gJqt_._3sa-7::before": {
+    height: "0",
+  },
+  "._3xxlZ": {
     "-webkit-app-region": "drag",
   },
 });
