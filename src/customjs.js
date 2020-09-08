@@ -58,7 +58,7 @@ addStylesheetRules({
   },
 
   'html[theme="dark"] body': {
-    background: "inherit",
+    background: "#252528 !important",
   },
 
   ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
