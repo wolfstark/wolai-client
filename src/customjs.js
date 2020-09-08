@@ -90,7 +90,7 @@ addStylesheetRules({
     "--wolai-svg-icon-312727": "inherit",
     "--wolai-title-color": "inherit",
   },
-  //   Mac左上角控制条
+  //   Mac左上角控制条,windows系统可以删掉
   ".gJqt_::before": {
     content: "''",
     height: "26px",
@@ -102,7 +102,10 @@ addStylesheetRules({
   "._3xxlZ": {
     "-webkit-app-region": "drag",
   },
-  ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ": {
+  ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ,._3G4KQ:first-child ._3xxlZ": {
     "padding-left": "71px",
   },
+  // "_3G4KQ:first-child ._3xxlZ": {
+  //   "padding-left": "71px",
+  // },
 });

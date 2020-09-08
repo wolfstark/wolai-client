@@ -16,6 +16,7 @@ var options = {
   icon: "./PNG/wolai_icon_512.png",
   inject: ["./src/customjs.js"],
   titleBarStyle: "hiddenInset",
+  internalUrls: '.*?\.wolai\.*?',
 };
 nativefier(options, function (error, appPath) {
   if (error) {
