@@ -21,6 +21,7 @@ var options = {
   inject: [`./src/${PLATFORM}.js`],
   titleBarStyle: "hiddenInset",
   internalUrls: ".*?.wolai.*?",
+  darwinDarkModeSupport: true,
 };
 nativefier(options, function (error, appPath) {
   if (error) {

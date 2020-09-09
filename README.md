@@ -26,4 +26,4 @@ npm run build
  🥳需要自定义css可以修改src/customjs.js
 
 ## 截图
-![9kEJh.png](https://wx2.sbimg.cn/2020/09/07/9kEJh.png)
+<img src="https://wx2.sbimg.cn/2020/09/07/9kEJh.png">

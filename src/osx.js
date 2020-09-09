@@ -109,3 +109,35 @@ addStylesheetRules({
     "padding-left": "71px",
   },
 });
+// 自动切换主题
+const DARK = "dark";
+const LIGHT = "light";
+
+const match = matchMedia("(prefers-color-scheme: dark)");
+
+match.addListener(({ matches }) => {
+  try {
+    const btns = document.querySelectorAll(".WqlcM .ant-switch");
+    const themeBtn = btns[btns.length - 1];
+    const isDark =
+      JSON.parse(
+        localStorage.getItem("wolai_theme") || JSON.stringify(LIGHT)
+      ) === DARK;
+    const isfit = matches == isDark;
+
+    if (!isfit && themeBtn) {
+      themeBtn.click();
+    }
+
+    if (!isfit && !themeBtn) {
+      if (matches) {
+        document.documentElement.setAttribute("theme", DARK);
+      } else {
+        document.documentElement.removeAttribute("theme");
+      }
+      window.location.reload();
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});
