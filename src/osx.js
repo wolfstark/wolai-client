@@ -131,9 +131,9 @@ match.addListener(({ matches }) => {
 
     if (!isfit && !themeBtn) {
       if (matches) {
-        document.documentElement.setAttribute("theme", DARK);
+        localStorage.setItem("wolai_theme", JSON.stringify(DARK));
       } else {
-        document.documentElement.removeAttribute("theme");
+        localStorage.setItem("wolai_theme", JSON.stringify(LIGHT));
       }
       window.location.reload();
     }

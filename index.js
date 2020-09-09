@@ -22,6 +22,11 @@ var options = {
   titleBarStyle: "hiddenInset",
   internalUrls: ".*?.wolai.*?",
   darwinDarkModeSupport: true,
+  // browserwindowOptions: JSON.stringify({
+  //   webPreferences: {
+  //     spellcheck: false,
+  //   },
+  // }),
 };
 nativefier(options, function (error, appPath) {
   if (error) {
