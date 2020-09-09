@@ -1,4 +1,4 @@
-function addStylesheetRules(rules) {
+const addStylesheetRules = (rules) => {
   const styleEl = document.createElement("style");
 
   document.head.appendChild(styleEl);
@@ -23,7 +23,7 @@ function addStylesheetRules(rules) {
       styleSheet.cssRules.length
     );
   }
-}
+};
 
 addStylesheetRules({
   "._3S0Sh": {
@@ -108,7 +108,4 @@ addStylesheetRules({
   ".cEs8w._3sa-7 ~ ._3G4KQ ._3xxlZ,._3G4KQ:first-child ._3xxlZ": {
     "padding-left": "71px",
   },
-  // "_3G4KQ:first-child ._3xxlZ": {
-  //   "padding-left": "71px",
-  // },
 });

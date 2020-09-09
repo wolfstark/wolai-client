@@ -1,13 +1,15 @@
 {
   "name": "wolai",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "index.js",
   "homepage": "https://github.com/wolfstark/wolai-client",
   "scripts": {
-    "build": "node index.js"
+    "build:osx": "cross-env PLATFORM=osx node index.js",
+    "build:win": "cross-env PLATFORM=windows node index.js"
   },
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.2",
     "nativefier": "^10.1.0"
   }
 }

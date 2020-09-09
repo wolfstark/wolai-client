@@ -1,6 +1,9 @@
 var nativefier = require("nativefier").default;
+var package = require("./package.json");
 
+const { PLATFORM } = process.env;
 // @ts-check
+console.log("PLATFORM", PLATFORM);
 
 /**
  * @type {import("nativefier/lib/options/model").NativefierOptions}
@@ -8,15 +11,16 @@ var nativefier = require("nativefier").default;
 var options = {
   name: "wolai", // will be inferred if not specified
   targetUrl: "https://www.wolai.com", // required
-  version: "1.0.1",
+  version: package.version,
   out: "./dist",
   zoom: 1.0,
+  platform: PLATFORM,
   showMenuBar: false,
   disableContextMenu: true,
-  icon: "./PNG/wolai_icon_512.png",
-  inject: ["./src/customjs.js"],
+  icon: "./assets/wolai_icon_512.png",
+  inject: [`./src/${PLATFORM}.js`],
   titleBarStyle: "hiddenInset",
-  internalUrls: '.*?\.wolai\.*?',
+  internalUrls: ".*?.wolai.*?",
 };
 nativefier(options, function (error, appPath) {
   if (error) {
