@@ -39,7 +39,7 @@ win64
 npm run build:win
 ```
 
-🥳 需要自定义 css 可以修改 src/customjs.js
+🥳 需要自定义 css 可以修改 src/osx.js 或 src/windows.js
 
 ## 截图
 
