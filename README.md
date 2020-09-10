@@ -8,20 +8,24 @@
 - 根据系统主题自动切换 wolai 主题
 - win64 客户端优先使用本地`更纱黑体`
 
-## 环境要求
+## 构建
+
+### 环境要求
 
 - macOS 10.9+ / Windows / Linux
 - [Node.js](https://nodejs.org/zh-cn/download/) `>= 10`
 
+---
+
 下载并解压本项目，进入项目文件夹下
 
-安装依赖
+### 安装依赖
 
 ```bash
 npm install
 ```
 
-构建客户端
+### 构建客户端
 
 MacOS
 
