@@ -43,8 +43,8 @@ addStylesheetRules({
     "--wolai-header-page-title-color": "rgb(55, 53, 47)",
     "--wolai-workspace-name-color": "rgb(55, 53, 47)",
     "--wolai-sidebar-bg": "rgb(247, 246, 243)",
-    "--wolai-bg": "rgb(252, 249, 245)",
-    "--wolai-editor-bg": "rgb(252, 249, 245)",
+    // "--wolai-bg": "rgb(252, 249, 245)",
+    // "--wolai-editor-bg": "rgb(252, 249, 245)",
   },
   "._2VNwp": {
     "line-height": "1.625",
@@ -54,9 +54,9 @@ addStylesheetRules({
   },
 
   "html body": {
-    background: "rgb(252, 249, 245) !important",
+    // background: "rgb(252, 249, 245) !important",
     "font-family":
-      '"zh quote", -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans CJK SC", "更纱黑体 UI SC","Microsoft YaHei", 微软雅黑, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      '"zh quote", -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans CJK SC", "更纱黑体 UI SC","Sarasa Gothic SC", "Microsoft YaHei", 微软雅黑, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
   },
 
   'html[theme="dark"] body': {
@@ -95,4 +95,36 @@ addStylesheetRules({
     "--wolai-svg-icon-312727": "inherit",
     "--wolai-title-color": "inherit",
   },
+});
+// 自动切换主题
+const DARK = "dark";
+const LIGHT = "light";
+
+const match = matchMedia("(prefers-color-scheme: dark)");
+
+match.addListener(({ matches }) => {
+  try {
+    const btns = document.querySelectorAll(".WqlcM .ant-switch");
+    const themeBtn = btns[btns.length - 1];
+    const isDark =
+      JSON.parse(
+        localStorage.getItem("wolai_theme") || JSON.stringify(LIGHT)
+      ) === DARK;
+    const isfit = matches == isDark;
+
+    if (!isfit && themeBtn) {
+      themeBtn.click();
+    }
+
+    if (!isfit && !themeBtn) {
+      if (matches) {
+        localStorage.setItem("wolai_theme", JSON.stringify(DARK));
+      } else {
+        localStorage.setItem("wolai_theme", JSON.stringify(LIGHT));
+      }
+      window.location.reload();
+    }
+  } catch (error) {
+    console.error(error);
+  }
 });
