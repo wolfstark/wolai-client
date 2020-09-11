@@ -115,7 +115,7 @@ const LIGHT = "light";
 
 const match = matchMedia("(prefers-color-scheme: dark)");
 
-match.addListener(({ matches }) => {
+match.addEventListener("change", ({ matches }) => {
   try {
     const btns = document.querySelectorAll(".WqlcM .ant-switch");
     const themeBtn = btns[btns.length - 1];

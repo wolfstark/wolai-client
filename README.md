@@ -6,7 +6,7 @@
 
 - 适配 MacOS 左上角控制条
 - 根据系统主题自动切换 wolai 主题
-- win64 客户端优先使用本地`更纱黑体`
+- win64 客户端优先使用本地[更纱黑体](https://github.com/be5invis/Sarasa-Gothic)
 
 ## 构建
 
