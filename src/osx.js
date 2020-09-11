@@ -43,8 +43,8 @@ addStylesheetRules({
     "--wolai-header-page-title-color": "rgb(55, 53, 47)",
     "--wolai-workspace-name-color": "rgb(55, 53, 47)",
     "--wolai-sidebar-bg": "rgb(247, 246, 243)",
-    // "--wolai-bg": "rgb(252, 249, 245)",
-    // "--wolai-editor-bg": "rgb(252, 249, 245)",
+    "--wolai-bg": "rgb(252, 249, 245)",
+    "--wolai-editor-bg": "rgb(252, 249, 245)",
   },
   "._2VNwp": {
     "line-height": "1.625",
@@ -54,7 +54,7 @@ addStylesheetRules({
   },
 
   "html body": {
-    // background: "rgb(252, 249, 245) !important",
+    background: "rgb(252, 249, 245) !important",
   },
 
   'html[theme="dark"] body': {
