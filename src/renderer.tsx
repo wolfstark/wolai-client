@@ -110,16 +110,19 @@ const App = (props: { wolaiUrl: string }) => {
       wolaiElm.current.focus();
       // ========== TODO
 
-      // const webContents = electron.remote.webContents.fromId(
-      //   wolaiElm.current.getWebContentsId()
-      // );
+      const webContents = electron.remote.webContents.fromId(
+        wolaiElm.current.getWebContentsId()
+      );
+      (window as any).webContents = webContents;
       // webContents.on("new-window", (e, urlToGo) => {
       //   e.preventDefault();
       //   ipc.sendToMain("create-window", urlToGo);
       // });
     });
     electronWindow.addListener("app-command", (e, cmd) => {
-      const webContents = wolaiElm.current.getWebContents();
+      const webContents = electron.remote.webContents.fromId(
+        wolaiElm.current.getWebContentsId()
+      );
       if (cmd === "browser-backward" && webContents.canGoBack()) {
         webContents.goBack();
       } else if (cmd === "browser-forward" && webContents.canGoForward()) {
@@ -127,7 +130,9 @@ const App = (props: { wolaiUrl: string }) => {
       }
     });
     electronWindow.addListener("swipe", (e, dir) => {
-      const webContents = wolaiElm.current.getWebContents();
+      const webContents = electron.remote.webContents.fromId(
+        wolaiElm.current.getWebContentsId()
+      );
       if (dir === "left" && webContents.canGoBack()) {
         webContents.goBack();
       } else if (dir === "right" && webContents.canGoForward()) {
@@ -147,7 +152,7 @@ const App = (props: { wolaiUrl: string }) => {
           id="wolai"
           src={props.wolaiUrl}
           preload={`file://${MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY}`}
-          allowpopups={true}
+          // allowpopups={true}
           // preload={MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY}
           // preload="./preload.js"
           style={style.wolaiWebview}
