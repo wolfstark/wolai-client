@@ -1,0 +1,8 @@
+{
+  "env": "production",
+  "isLocalhost": true,
+  "baseURL": "https://www.wolai.com",
+  "protocol": "wolai",
+  "desktopAppId": "wolai.id",
+  "offline": false
+}
