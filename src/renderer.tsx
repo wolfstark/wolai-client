@@ -110,10 +110,10 @@ const App = (props: { wolaiUrl: string }) => {
       wolaiElm.current.focus();
       // ========== TODO
 
-      const webContents = electron.remote.webContents.fromId(
-        wolaiElm.current.getWebContentsId()
-      );
-      (window as any).webContents = webContents;
+      // const webContents = electron.remote.webContents.fromId(
+      //   wolaiElm.current.getWebContentsId()
+      // );
+      // (window as any).webContents = webContents;
       // webContents.on("new-window", (e, urlToGo) => {
       //   e.preventDefault();
       //   ipc.sendToMain("create-window", urlToGo);
